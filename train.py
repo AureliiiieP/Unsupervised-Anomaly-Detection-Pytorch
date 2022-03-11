@@ -5,7 +5,6 @@ from torchvision import transforms
 import config
 from models.unet import UNet
 from loader import Loader
-from utils import dice_loss
 
 torch.manual_seed(2022)
 

@@ -16,3 +16,7 @@ Anomaly for testing include
 - [ ] Add Unet
 - [ ] Add VAE
 - [ ] Add Normalizing flow (Less able to generate new content)
+- [ ] Improve reproducibility (copyfile config, save datasplit)
+
+## Ressources used 
+- https://github.com/usuyama/pytorch-unet UNET architecture

@@ -32,7 +32,7 @@ lossF = torch.nn.MSELoss()
 # Create output folders
 #################
 os.makedirs(config.TRAINING_OUTPUT_DIR, exist_ok=True)
-visualization_dir = os.path.join("training_visualization", config.TRAINING_OUTPUT_DIR)
+visualization_dir = os.path.join(config.TRAINING_OUTPUT_DIR, "training_visualization")
 os.makedirs(visualization_dir, exist_ok=True)
 
 #################
@@ -81,5 +81,5 @@ for epoch in range(config.EPOCHS):
     print("Epoch " + str(epoch) + "  :  train_Loss=" + str(train_loss) + "    val_Loss=" + str(valid_loss))
     if valid_loss < bestLoss :
         bestLoss = valid_loss
-        torch.save(model.state_dict(), "best.pt")
+        torch.save(model.state_dict(), os.path.join(config.TRAINING_OUTPUT_DIR,"best.pt"))
         print("Model saved")

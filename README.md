@@ -16,7 +16,7 @@ Below are samples of the dataset :
 
 ![Examples](doc/dataset.png)
 
-Note. This task is suprisingly not as easy as it looks as those cookies are made by hand and aren't perfectly identical (chocolat position, small chocolat smear, cookie texture, natural tiny cracks that aren't anomalies etc.)
+Note. This task is suprisingly not as easy as it looks as those cookies are made by hand and aren't perfectly identical (chocolate position, small chocolate smear, cookie texture, natural tiny cracks that aren't anomalies etc.)
 
 ## Example of outputs
 Below are examples of outputs from the test set.

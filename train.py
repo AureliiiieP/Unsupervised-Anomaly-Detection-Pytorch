@@ -62,7 +62,7 @@ for epoch in range(config.EPOCHS):
     valid_loss = 0
     elemCount = 0
     with torch.no_grad():
-        for data in valid_loader:
+        for data, _ in valid_loader:
             data = data.to(device)
             output = model(data)
 

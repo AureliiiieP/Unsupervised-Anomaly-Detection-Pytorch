@@ -1,5 +1,4 @@
 # Unsupervised-Anomaly-Detection-Pytorch
-Use unsupervised learning for anomaly detection.
 
 In an industrial setting (factories etc), it is usually easy to collect a lot of samples without defect. However anomalies can be very diverse in appearance, type and very rare which make it very difficult to collect and annonate enough data. Unsupervised learning is very useful in such cases.
 

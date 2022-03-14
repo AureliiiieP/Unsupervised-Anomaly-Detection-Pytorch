@@ -15,7 +15,7 @@ Anomalies for testing include
 
 Below are samples of the dataset :
 
-![Examples](doc/figure.png)
+![Examples](doc/dataset.png)
 
 ## Example of outputs
 Below are examples of outputs from the test set.

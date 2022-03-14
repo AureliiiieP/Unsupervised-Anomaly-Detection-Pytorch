@@ -9,7 +9,7 @@ We created a tiny toy dataset of 31 images. (24 normal samples and 7 anomaly sam
 
 Anomalies for testing include
 - Broken cookie
-- Mustard on wookie
+- Mustard on cookie
 - Plastic wrap on cookie
 
 Below are samples of the dataset :

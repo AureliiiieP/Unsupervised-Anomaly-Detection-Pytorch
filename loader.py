@@ -4,13 +4,14 @@ from PIL import Image
 import os
 
 class Loader(torch.utils.data.Dataset):
-    def __init__(self, data_dir, state):
+    def __init__(self, data_dir, state, data_aug = False):
         self.dir = data_dir
         self.fileList = [f[:-4] for f in os.listdir(self.dir) if os.path.isfile(os.path.join(self.dir, f)) and ".jpg" in f]
         self.indexes = range(len(self.fileList))
         self.dic = {k: self.fileList[k] for k in self.indexes}
         self.state = state
         self.resize = 512
+        self.data_aug = data_aug
 
     def __len__(self):
         return len(self.fileList)
@@ -24,7 +25,7 @@ class Loader(torch.utils.data.Dataset):
         image = Image.open(img_name).convert('L')
         image.verify()
 
-        if self.state == "train":
+        if self.data_aug == True and self.state == "train":
             mirror = torch.rand((2,))
             if mirror[0] >= 0.5 :
                 image = torchvision.transforms.functional.hflip(image)
@@ -34,4 +35,4 @@ class Loader(torch.utils.data.Dataset):
             image, size=[self.resize, self.resize])
         image = (torchvision.transforms.functional.to_tensor(image))
 
-        return image
+        return image, self.dic[idx]

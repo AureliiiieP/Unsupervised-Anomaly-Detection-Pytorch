@@ -57,3 +57,16 @@ class UNet(nn.Module):
         out = self.conv_last(x)
         
         return out
+
+    def forward_features(self, x):
+        conv1 = self.dconv_down1(x)
+        x = self.maxpool(conv1)
+
+        conv2 = self.dconv_down2(x)
+        x = self.maxpool(conv2)
+        
+        conv3 = self.dconv_down3(x)
+        x = self.maxpool(conv3)   
+
+        x = self.dconv_down4(x)
+        return self.maxpool(x).flatten(1)

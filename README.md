@@ -4,11 +4,9 @@ In an industrial setting (factories etc), it is usually easy to collect a lot of
 
 We proposed two methods for anomaly detection.
 
-- Auto-encoder
-The model task is to reconstruct the image given as input. Since it has only been trained on "normal" samples, reconstruction on anomalies parts should be poor. By taking difference of the reconstruction output and input, we may be able to detect the anomaly.
+- Auto-encoder : The model task is to reconstruct the image given as input. Since it has only been trained on "normal" samples, reconstruction on anomalies parts should be poor. By taking difference of the reconstruction output and input, we may be able to detect the anomaly.
 
-- Clustering 
-We train a Kmeans to find clusters on normal train samples. When computing the distance between test samples to cluster, we assume the distance will be big if the sample is an anomaly
+- Clustering : We train a Kmeans to find clusters on normal train samples. When computing the distance between test samples to cluster, we assume the distance will be big if the sample is an anomaly
 
 ## Toy dataset
 We created a tiny toy dataset of 31 images. (24 normal samples and 7 anomaly samples).
